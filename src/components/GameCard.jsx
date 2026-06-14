@@ -25,18 +25,29 @@ export default function GameCard({ game, isFavorite, onSelect, onToggleFavorite 
       {/* Aspect-Square Game Thumbnail Frame */}
       <div className="aspect-square bg-zinc-900 border-2 border-zinc-800 group-hover:border-brand-fuchsia flex items-center justify-center overflow-hidden relative transition-colors duration-200">
         
+        {/* Game Cover Image (if available) else Fallback to Big Bold Lettering Backdrop */}
+        {game.coverUrl ? (
+          <img
+            src={game.coverUrl}
+            alt={game.title}
+            referrerPolicy="no-referrer"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          />
+        ) : (
+          <div className="absolute text-5xl md:text-6xl lg:text-7xl font-sans font-black text-zinc-950 select-none group-hover:scale-110 group-hover:text-zinc-900 transition-all duration-300 pointer-events-none uppercase tracking-tighter">
+            {abbrev}
+          </div>
+        )}
+
         {/* Dynamic theme accent border overlay */}
-        <div className={`absolute inset-0 bg-gradient-to-br ${game.themeColor} opacity-5 group-hover:opacity-15 transition-opacity duration-250`} />
+        <div className={`absolute inset-0 bg-gradient-to-br ${game.themeColor} opacity-5 group-hover:opacity-20 transition-opacity duration-250 z-10`} />
 
-        {/* Big Bold 3-Letter Typography Backdrop */}
-        <div className="absolute text-5xl md:text-6xl lg:text-7xl font-sans font-black text-zinc-950 select-none group-hover:scale-110 group-hover:text-zinc-900 transition-all duration-300 pointer-events-none uppercase tracking-tighter">
-          {abbrev}
-        </div>
-
-        {/* Small Floating Icon to identify gameplay genre */}
-        <div className="h-12 w-12 flex items-center justify-center text-zinc-400 group-hover:text-brand-fuchsia transition-all duration-200 z-10">
-          <GameIcon name={game.iconName} className="h-8 w-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
-        </div>
+        {/* Small Floating Icon to identify gameplay genre (rendered on top of overlay/cover for dynamic feel if no cover) */}
+        {!game.coverUrl && (
+          <div className="h-12 w-12 flex items-center justify-center text-zinc-400 group-hover:text-brand-fuchsia transition-all duration-200 z-10">
+            <GameIcon name={game.iconName} className="h-8 w-8 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" />
+          </div>
+        )}
 
         {/* Favorite Hear Badge on corner */}
         <button
