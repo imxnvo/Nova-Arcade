@@ -1,98 +1,14 @@
 [
   {
-    "id": "snake",
-    "title": "Neon Snake",
-    "description": "Navigate the glowing neon grid, eat pixels, grow longer, and avoid crashing into walls or yourself.",
-    "iframeUrl": "/games/snake.html",
+    "id": "bloxd-io",
+    "title": "Bloxd.io",
+    "description": "An immersive multiplayer block-builder and action sandbox. Form alliances, construct massive fortresses, survive parkour towers, or engage in tactical BedWars, all inside a high-speed web arena.",
+    "themeColor": "from-emerald-600 to-teal-600",
+    "iconName": "Coins",
     "category": "Arcade",
-    "rating": 4.8,
-    "plays": 12450,
-    "iconName": "Flame",
-    "themeColor": "from-emerald-500 to-green-600",
-    "instructions": "Use WASD or Arrow Keys to change directions. Eat the red pixels to grow and score points."
-  },
-  {
-    "id": "pong",
-    "title": "Hyper Pong",
-    "description": "A high-speed, modern take on the classic table tennis arcade game. Battle a smart AI opponent.",
-    "iframeUrl": "/games/pong.html",
-    "category": "Arcade",
-    "rating": 4.6,
-    "plays": 8920,
-    "iconName": "Tv2",
-    "themeColor": "from-blue-500 to-indigo-600",
-    "instructions": "Use your Mouse cursor or Touch to move your paddle up and down. Deflect the ball past the AI."
-  },
-  {
-    "id": "breakout",
-    "title": "Brick Buster",
-    "description": "Destroy layers of colorful blocks by bouncing a ball off a slider. Catch falling power-ups to clear levels.",
-    "iframeUrl": "/games/breakout.html",
-    "category": "Action",
-    "rating": 4.7,
-    "plays": 14210,
-    "iconName": "Layers",
-    "themeColor": "from-purple-500 to-pink-600",
-    "instructions": "Move your Mouse or Touch to move the paddle left and right. Bounce the ball to destroy all bricks."
-  },
-  {
-    "id": "flappy",
-    "title": "Floppy Bird",
-    "description": "Tap or click to flap your wings and navigate through dangerous pipes. Keep a steady beat to score high.",
-    "iframeUrl": "/games/flappy.html",
-    "category": "Arcade",
-    "rating": 4.5,
-    "plays": 19800,
-    "iconName": "Wind",
-    "themeColor": "from-yellow-500 to-amber-600",
-    "instructions": "Press Spacebar, Up Arrow, or Click to flap upwards. Avoid hitting the green columns."
-  },
-  {
-    "id": "spaceinvaders",
-    "title": "Cosmic Defender",
-    "description": "Defend Earth from continuous rows of hostile alien invaders in this vintage high-octane space shoot'em up.",
-    "iframeUrl": "/games/spaceinvaders.html",
-    "category": "Action",
     "rating": 4.9,
-    "plays": 22400,
-    "iconName": "Rocket",
-    "themeColor": "from-red-500 to-orange-600",
-    "instructions": "Use Left/Right arrow keys or Mouse to move. Press Spacebar or Click to shoot laser beams."
-  },
-  {
-    "id": "minesweeper",
-    "title": "Quantum Mines",
-    "description": "A refined logical puzzle. Uncover blank squares on the minefield while flagging dangerous hidden coordinates.",
-    "iframeUrl": "/games/minesweeper.html",
-    "category": "Puzzle",
-    "rating": 4.7,
-    "plays": 7450,
-    "iconName": "Bomb",
-    "themeColor": "from-cyan-500 to-sky-600",
-    "instructions": "Left-click to reveal a cell. Right-click or hold Ctrl to place a caution flag. Avoid detonation."
-  },
-  {
-    "id": "game2048",
-    "title": "2048 Legends",
-    "description": "Merge identical numbers sequentially on an elegant grid to compound your score and manifest the ultimate 2048 tile.",
-    "iframeUrl": "https://gabrielecirulli.github.io/2048/",
-    "category": "Puzzle",
-    "rating": 4.8,
-    "plays": 31200,
-    "iconName": "Grid3X3",
-    "themeColor": "from-amber-600 to-orange-500",
-    "instructions": "Use WASD or Arrow Keys to slide numbers in any grid direction. Matching numbers combine when merged."
-  },
-  {
-    "id": "hextris",
-    "title": "Hextris Revolution",
-    "description": "A fast-paced combination of matching colors and spatial rotation. Match color rings to stave off the expanding hexagon.",
-    "iframeUrl": "https://hextris.github.io/hextris/",
-    "category": "Strategy",
-    "rating": 4.6,
-    "plays": 15400,
-    "iconName": "Hexagon",
-    "themeColor": "from-rose-500 to-violet-600",
-    "instructions": "Rotate utilizing the Arrow keys or Tap the sides. Match three or more segments of adjacent similar colors."
+    "plays": 482100,
+    "iframeUrl": "https://bloxd.io/",
+    "instructions": "Use WASD keys to move and steer.\nUse Spacebar to jump.\nUse Left Click to mine/attack, or Right Click to build/place blocks.\nUse Shift to run or sneak.\nNumbers 1-9 to cycle your hotbar items."
   }
 ]

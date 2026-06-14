@@ -53,7 +53,7 @@ export default function GamePlay({ game, onClose, isFavorite, onToggleFavorite }
             <button
               onClick={onClose}
               className="flex h-10 w-10 items-center justify-center rounded-none bg-zinc-950 border-2 border-zinc-800 text-zinc-400 hover:text-brand-fuchsia hover:border-brand-fuchsia transition-colors cursor-pointer"
-              title="Back to Directory list"
+              title="Back to Games list"
               id="gameplay-back-btn"
             >
               <ArrowLeft className="h-5 w-5" />
@@ -66,7 +66,7 @@ export default function GamePlay({ game, onClose, isFavorite, onToggleFavorite }
               <p className="text-[10px] text-zinc-400 font-mono flex items-center gap-1.5 mt-0.5 uppercase tracking-wider">
                 <span className="inline-block w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
                 <span>SERVER: </span>
-                <span className="text-zinc-500">{game.iframeUrl.startsWith('/') ? 'LOCAL_BYPASS_DIR' : 'CLOUD_FRAMEWORK_SECURE'}</span>
+                <span className="text-zinc-500">{game.iframeUrl.startsWith('/') ? 'LOCAL_ASSET_HOST' : 'REMOTE_ARCADE_LINK'}</span>
               </p>
             </div>
           </div>
@@ -178,16 +178,16 @@ export default function GamePlay({ game, onClose, isFavorite, onToggleFavorite }
           </div>
         </div>
 
-        {/* Bypass safety status notice */}
+        {/* System safety status notice */}
         <div className="border-l-4 border-brand-fuchsia bg-zinc-900/40 p-5 border-y-2 border-r-2 border-zinc-800">
           <div className="flex gap-3">
             <GameIcon name="Sparkles" className="h-5 w-5 text-brand-fuchsia shrink-0 mt-0.5 animate-pulse" />
             <div>
               <h4 className="text-xs font-mono font-black text-white uppercase tracking-wider">
-                NETWORK BYPASS DIRECTIVE
+                SYSTEM PLAY COMPATIBILITY
               </h4>
               <p className="text-[11px] text-zinc-500 leading-relaxed mt-1 font-mono uppercase">
-                THIS INTERACTIVE PORTAL INJECTS ASSETS DIRECTLY THROUGH OUR INTERNAL SERVER TO GUARANTEE 100% SECURE, ANONYMOUS BYPASS OF FILTER FIREWALLS. No trace is recorded in corporate/educational firewalls.
+                THIS INTERACTIVE PORTAL INJECTS RE-EMULATED VINTAGE ASSETS DIRECTLY THROUGH CLEAN WRAPPERS TO ENSURE OPTIMAL PERFORMANCE, HIGH FIDELITY RUNDOWN TIMINGS, AND STABILIZED GRAPHICS ACCELERATION WITH ZERO CLUTTER.
               </p>
             </div>
           </div>

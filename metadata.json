@@ -1,6 +1,6 @@
 {
-  "name": "Unblocked Games",
-  "description": "A curated collection of classical web games played inside secure, responsive iframe frames.",
+  "name": "Nova Arcade",
+  "description": "A curated collection of retro-modern arcade games played in fully responsive frames.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -16,7 +16,7 @@ export default function App() {
   // Load favorites from local storage on render
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('unblocked_games_favorites');
+      const saved = localStorage.getItem('nova_arcade_favorites');
       if (saved) {
         setFavorites(JSON.parse(saved));
       }
@@ -40,7 +40,7 @@ export default function App() {
     
     setFavorites(updatedFavorites);
     try {
-      localStorage.setItem('unblocked_games_favorites', JSON.stringify(updatedFavorites));
+      localStorage.setItem('nova_arcade_favorites', JSON.stringify(updatedFavorites));
     } catch (err) {
       console.error('Error saving favorites:', err);
     }
@@ -67,39 +67,39 @@ export default function App() {
   const totalPlaysCount = games.reduce((acc, current) => acc + current.plays, 0);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans flex flex-col overflow-x-hidden selection:bg-brand-fuchsia selection:text-black" id="unblocked-games-root">
+    <div className="min-h-screen bg-black text-white font-sans flex flex-col overflow-x-hidden selection:bg-brand-fuchsia selection:text-black" id="nova-arcade-root">
       
       {/* Header Section */}
-      <header className="flex items-center justify-between px-8 py-6 border-b border-zinc-800 shrink-0" id="app-site-header">
+      <header className="flex flex-row items-center justify-between px-4 sm:px-8 py-4 sm:py-6 border-b border-zinc-800 shrink-0 gap-3" id="app-site-header">
         <div 
-          className="flex items-baseline gap-2 cursor-pointer select-none"
+          className="flex items-baseline gap-1.5 cursor-pointer select-none min-w-0"
           onClick={() => {
             setSelectedGame(null);
             setActiveCategory('All');
             setSearchQuery('');
           }}
         >
-          <h1 className="text-3xl md:text-5xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-brand-violet to-brand-fuchsia font-display">
-            UNBLOCKED
+          <h1 className="text-xl sm:text-2xl md:text-4xl font-black italic uppercase tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-brand-violet to-brand-fuchsia font-display whitespace-nowrap overflow-hidden">
+            Nova Arcade
           </h1>
-          <span className="text-xs font-bold bg-zinc-800 px-2 py-1 rounded text-zinc-400 font-mono">v2.0</span>
+          <span className="text-[10px] font-bold bg-zinc-800 px-1.5 py-0.5 rounded text-zinc-400 font-mono tracking-wider shrink-0">v2.0</span>
         </div>
 
         {/* Search Field & Custom badges */}
-        <div className="flex items-center gap-4 md:gap-6">
-          <div className="flex bg-zinc-900 rounded-full px-4 py-2 border border-zinc-700">
-            <span className="text-zinc-500 mr-2 text-xs font-mono font-bold hidden sm:inline">SEARCH_GAMES:</span>
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-6 shrink-0">
+          <div className="flex bg-zinc-900 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 border border-zinc-700 items-center">
+            <span className="text-zinc-500 mr-2 text-[10px] sm:text-xs font-mono font-bold hidden xs:inline">SEARCH_GAMES:</span>
             <input 
               type="text" 
               placeholder="TYPING..." 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-transparent outline-none text-xs font-bold uppercase w-24 sm:w-36 text-white placeholder-zinc-650 font-mono"
+              className="bg-transparent outline-none text-[10px] sm:text-xs font-bold uppercase w-16 xs:w-24 sm:w-36 text-white placeholder-zinc-650 font-mono"
             />
           </div>
           <div className="flex gap-2">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-zinc-800 rounded-full flex items-center justify-center border border-zinc-700 font-black text-xs md:text-sm text-zinc-300 font-mono">?</div>
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-brand-fuchsia rounded-full flex items-center justify-center border border-white font-black text-xs md:text-sm text-black font-mono">U</div>
+            <div className="w-8 h-8 bg-zinc-800 rounded-full flex items-center justify-center border border-zinc-700 font-black text-xs text-zinc-300 font-mono">?</div>
+            <div className="w-8 h-8 bg-brand-fuchsia rounded-full flex items-center justify-center border border-white font-black text-xs text-black font-mono">N</div>
           </div>
         </div>
       </header>
@@ -110,7 +110,7 @@ export default function App() {
         {/* Sidebar Directories List */}
         <aside className="w-full md:w-64 border-b md:border-b-0 md:border-r border-zinc-800 p-6 flex flex-col gap-8 shrink-0">
           <div>
-            <h2 className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-black mb-4 font-mono">Directories</h2>
+            <h2 className="text-[10px] uppercase tracking-[0.2em] text-zinc-500 font-black mb-4 font-mono">Categories</h2>
             <nav className="flex flex-row md:flex-col gap-3 md:gap-4 overflow-x-auto md:overflow-y-auto pb-2 md:pb-0 scrollbar-none font-display">
               {['All', 'Arcade', 'Puzzle', 'Action', 'Strategy', 'Favorites'].map((cat) => {
                 const isActive = activeCategory === cat;
@@ -141,9 +141,9 @@ export default function App() {
           
           {/* Status Widget */}
           <div className="mt-auto bg-zinc-900 p-4 rounded-lg border border-zinc-800 font-mono hidden md:block">
-            <h3 className="text-xs font-bold mb-1 uppercase text-zinc-300">JSON INDEX STATUS</h3>
-            <p className="text-[10px] text-zinc-500 leading-tight uppercase">Database loaded: {games.length} games ready to frame.</p>
-            <p className="text-[10px] text-zinc-500 leading-tight uppercase mt-1">Plays proxy count: {totalPlaysCount.toLocaleString()}</p>
+            <h3 className="text-xs font-bold mb-1 uppercase text-zinc-300">SYSTEM STATUS</h3>
+            <p className="text-[10px] text-zinc-500 leading-tight uppercase">Platform loaded: {games.length} games available.</p>
+            <p className="text-[10px] text-zinc-500 leading-tight uppercase mt-1">Plays count: {totalPlaysCount.toLocaleString()}</p>
           </div>
         </aside>
 
@@ -163,7 +163,7 @@ export default function App() {
                 {/* Active Category Display Bar */}
                 <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
                   <h2 className="text-2xl font-display font-black uppercase tracking-tight text-white flex items-center gap-2">
-                    <span>{activeCategory} Directory</span>
+                    <span>{activeCategory} Section</span>
                     <span className="text-xs font-mono font-bold bg-zinc-900 border border-zinc-800 text-zinc-400 px-2 py-0.5">
                       {filteredGames.length} AVAILABLE
                     </span>
@@ -189,7 +189,7 @@ export default function App() {
                     <h3 className="text-lg font-black uppercase text-zinc-300 tracking-tight">NO INDEX MATCHED</h3>
                     <p className="text-xs text-zinc-500 max-w-sm uppercase mt-2 leading-relaxed">
                       {activeCategory === 'Favorites' 
-                        ? "You haven't marked any games as favorites yet. Mark some hearts in the game directory list!"
+                        ? "You haven't marked any games as favorites yet. Click the heart icon on any game to save it!"
                         : "No assets found for the specified search keys. Search with another spelling or category!"}
                     </p>
                     {(searchQuery !== '' || activeCategory !== 'All') && (
@@ -232,14 +232,14 @@ export default function App() {
       {/* Footer info bar */}
       <footer className="h-14 border-t border-zinc-800 flex flex-col sm:flex-row items-center justify-between px-8 bg-zinc-950 shrink-0 gap-2 py-4 sm:py-0 font-mono">
         <div className="flex items-center gap-4 text-[10px] font-bold text-zinc-500 uppercase">
-          <span>Proxy Status: <span className="text-green-500">ACTIVE</span></span>
+          <span>Nova Arcade: <span className="text-green-500 font-black">READY</span></span>
           <span className="w-1 h-1 bg-zinc-800 rounded-full hidden sm:inline"></span>
-          <span className="hidden sm:inline">Nodes: 0x44, 0xAF, 0x91</span>
+          <span className="hidden sm:inline">ARCADE NETWORK</span>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-[10px] font-black text-zinc-700">BYPASS_V4.02</span>
+          <span className="text-[10px] font-black text-zinc-700">VERSION 2.00</span>
           <div className="h-4 w-[1px] bg-zinc-800 latent-bar hidden sm:block" />
-          <span className="text-[10px] font-black text-brand-fuchsia uppercase tracking-widest text-center">No Ads. No Tracking. Just Play.</span>
+          <span className="text-[10px] font-black text-brand-fuchsia uppercase tracking-widest text-center">Pure Arcade Experience. Just Play.</span>
         </div>
       </footer>
     </div>
