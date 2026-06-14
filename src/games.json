@@ -9,7 +9,7 @@
     "rating": 4.9,
     "plays": 482100,
     "iframeUrl": "https://bloxd.io/",
-    "coverUrl": "/bloxd_cover.jpg",
+    "coverUrl": "bloxd_cover.jpg",
     "instructions": "Use WASD keys to move and steer.\nUse Spacebar to jump.\nUse Left Click to mine/attack, or Right Click to build/place blocks.\nUse Shift to run or sneak.\nNumbers 1-9 to cycle your hotbar items."
   }
 ]
