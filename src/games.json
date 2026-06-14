@@ -9,7 +9,22 @@
     "rating": 4.9,
     "plays": 482100,
     "iframeUrl": "https://bloxd.io/",
-    "coverUrl": "bloxd_cover.jpg",
+    "coverUrl": "/bloxd_cover.jpg",
     "instructions": "Use WASD keys to move and steer.\nUse Spacebar to jump.\nUse Left Click to mine/attack, or Right Click to build/place blocks.\nUse Shift to run or sneak.\nNumbers 1-9 to cycle your hotbar items."
+  },
+  {
+    "id": "rally-racer-dirt",
+    "title": "Rally Racer Dirt",
+    "description": "Rally Racer Dirt is a rally drift-based game that allows you to drift on both asphalt and dirt terrains while navigating through hills. This category is redefined with the introduction of Rally Racer Dirt, offering realistic and stunning controls. Enjoy drifty tuned physics, detailed graphics, 13 vehicles, 5 tuned tracks, challenge mode with 60 challenges, survival mode, and real-time multiplayer.",
+    "themeColor": "from-amber-600 to-red-650",
+    "iconName": "Gamepad2",
+    "category": "Action",
+    "rating": 4.8,
+    "plays": 542910,
+    "iframeUrl": "https://trafficjam3d.github.io/rally-racer-dirt/",
+    "coverUrl": "/src/assets/images/rally_racer_cover_1781434729698.jpg",
+    "instructions": "Drive & Steer: WASD or Arrow Keys.\nHandbrake & Drift: Spacebar.\nChange Camera: C key.\nPause Game: P or Esc key.\nRelease WebGL: November 2023.",
+    "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; gamepad; fullscreen; keyboard-map;",
+    "sandbox": "allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-presentation allow-scripts allow-same-origin allow-downloads allow-popups allow-popups-to-escape-sandbox"
   }
 ]

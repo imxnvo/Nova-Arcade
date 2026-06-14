@@ -99,7 +99,7 @@ export default function App() {
           key="intro-screen-wrapper"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           <IntroScreen onComplete={() => setShowIntro(false)} />
         </motion.div>

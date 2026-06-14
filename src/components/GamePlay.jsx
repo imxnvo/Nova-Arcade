@@ -121,8 +121,12 @@ export default function GamePlay({ game, onClose, isFavorite, onToggleFavorite }
             src={game.iframeUrl}
             title={game.title}
             className="absolute inset-0 w-full h-full border-none"
-            allow="fullscreen; gamepad; autoplay"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-pointer-lock"
+            allow={game.allow || "fullscreen; gamepad; autoplay"}
+            sandbox={game.sandbox || "allow-scripts allow-same-origin allow-forms allow-pointer-lock"}
+            allowFullScreen={true}
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            msallowfullscreen="true"
             referrerPolicy="no-referrer"
             id={`game-frame-${game.id}`}
           />
